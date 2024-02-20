@@ -44,7 +44,7 @@ class Auto:
 
     def verificarIntegridad(self):
         for asiento in self.asientos:
-            if asiento.registro != self.registro or asiento.registro != self.motor.registro:
+            if asiento.registro != self.registro != self.motor.registro:
                 print("Las piezas no son originales")
                 return False
 
