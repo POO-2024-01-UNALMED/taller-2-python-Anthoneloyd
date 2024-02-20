@@ -6,9 +6,8 @@ class Asiento:
 
     def cambiarColor(self, color: str):
         # Se verifica que el color sea uno de los colores permitidos
-        assert color == "rojo" or color == "verde" or color == "amarillo" or color == "negro" or color == "blanco"
-
-        self.color = color
+        if color == "rojo" or color == "verde" or color == "amarillo" or color == "negro" or color == "blanco":
+            self.color = color
 
 class Motor:
     def __init__(self, numeroCilindros: int, tipo: str, registro: int):
@@ -21,9 +20,8 @@ class Motor:
 
     def asignarTipo(self, nuevo_tipo: str):
         # Comprobar que el valor ingresado sea "electrico" o "gasolina"
-        assert nuevo_tipo == "electrico" or nuevo_tipo == "gasolina"
-
-        self.tipo = nuevo_tipo
+        if nuevo_tipo == "electrico" or nuevo_tipo == "gasolina":
+            self.tipo = nuevo_tipo
 
 class Auto:
     cantidad_creados = 0
