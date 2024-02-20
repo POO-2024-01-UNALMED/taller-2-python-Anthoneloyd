@@ -26,7 +26,7 @@ class Motor:
 class Auto:
     cantidad_creados = 0
 
-    def __init__(self, modelo: str, precio: int, asientos: list, marca: str, motor: Motor, registro: int):
+    def __init__(self, modelo: str, precio: int, asientos: list, marca: str, motor, registro: int):
         self.modelo = modelo
         self.precio = precio
         self.asientos = asientos
@@ -44,7 +44,7 @@ class Auto:
 
     def verificarIntegridad(self):
         for asiento in self.asientos:
-            if asiento.registro != self.registro != self.motor.registro:
+            if asiento != self.registro != self.motor.registro:
                 print("Las piezas no son originales")
                 return False
 
